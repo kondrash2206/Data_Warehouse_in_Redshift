@@ -25,7 +25,7 @@ ETL Pipeline gets the data from 2 datasources (Staging Tables) and fills 4 Dimen
 * **sql_queries.py** -collection of all SQL Querries used in table manipulation and etl
 * **create_tables.py** - file that connects to a Redshift, drops all existing tables and creates new tables:  2 staging tables, 1 fact table and 4 dimension tables
 * **etl.py** - ETL (Extract Transfer Load) Pipeline that fills the previously created staging tables with data from json files. Fact and dimension tables are filled from staging tables.
-**dwh.cfg** - configuration file, containing the information needed to connect a Redshift cluster as well as access public S3 bucket. 
+* **dwh.cfg** - configuration file, containing the information needed to connect a Redshift cluster as well as access public S3 bucket. 
 
 # Installations
 In order to run this project following python libraries are needed: psycopg2, pandas. To run it first start Redshift Cluster, add all necessary information into "dwh.cfg" file, start "create_tables.py", this creates defined database and tables. And then run "etl.py" that fills the tables with data. 
