@@ -28,7 +28,7 @@ ETL Pipeline gets the data from 2 datasources (Staging Tables) and fills 4 Dimen
 * **dwh.cfg** - configuration file, containing the information needed to connect a Redshift cluster as well as access public S3 bucket. 
 
 # Installations
-In order to run this project following python libraries are needed: psycopg2, pandas. To run it first start Redshift Cluster, add all necessary information into "dwh.cfg" file, start "create_tables.py", this creates defined database and tables. And then run "etl.py" that fills the tables with data. 
+In order to run this project following python libraries are needed: psycopg2, configparser. To run it first start Redshift Cluster, add all necessary information into "dwh.cfg" file, start "create_tables.py", this creates defined database and tables. And then run "etl.py" that fills the tables with data. 
 
 ### Acknowledgements
 This project is a part of Udacity "Data Engineering" Nanodegree
