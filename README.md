@@ -17,7 +17,7 @@ The star schema below allows to answer the above stated questions:
 (* "D" - distribution key, "S" - sortkey)
 
 # ETL Pipeline
-ETL Pipeline gets the data from 2 datasources and fills 4 Dimension Tables (**Songs**, **Artists**, **Time**, **User**). The **Songplays** Table is filled also from **Songs** and **Artists** Tables.
+ETL Pipeline gets the data from 2 datasources (Staging Tables) and fills 4 Dimension Tables (**Songs**, **Artists**, **Time**, **User**). The Fact Table **Songplays** is filled also from **Songs** and **Artists** Tables.
 ![](https://github.com/kondrash2206/Data_Warehouse_in_Redshift/blob/master/table_sources.png)
 
 
