@@ -4,12 +4,20 @@ from sql_queries import copy_table_queries, insert_table_queries
 
 
 def load_staging_tables(cur, conn):
+    '''
+    Function that loads the data into staging tables
+    Input: "cur" db cursor, "conn" db connection
+    '''
     for query in copy_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def insert_tables(cur, conn):
+    '''
+    Function that loads the data into star schema tables
+    Input: "cur" db cursor, "conn" db connection
+    '''
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
