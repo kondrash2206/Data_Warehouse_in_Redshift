@@ -2,9 +2,10 @@
 Creating a Data Warehouse using data from AWS S3 and staging in Redshift 
 
 # Description
-In this project I have transferred data from Udacity public AWS S3 bucket "udacity-dend" containing multiple .json files into AWS Redshift using Python. Json files were obtained from ["Million Song Dataset"](http://millionsongdataset.com/) and ["Music streaming app event simulator"](https://github.com/Interana/eventsim). 
+In this project I have created an ETL Pipeline to fill an AWS Redshift based Data Warehouse for an imaginary music streaming app Sparkify.
+First, I have transferred data from Udacity public AWS S3 bucket "udacity-dend" containing multiple .json files into AWS Redshift using Python. Json files were obtained from ["Million Song Dataset"](http://millionsongdataset.com/) and ["Music streaming app event simulator"](https://github.com/Interana/eventsim). 
 
-As a result I have first created two staging tables: **staging_songs** (from song dataset .jsons) and **staging_events** (from event simulator jsons). Then I used these tables to distribute the data into a star chema tables. Fact Table: **songplays**; Dimension Tables: **users**,**songs**, **artists**, **time**. As a result a Redshift-based Data Warehouse was created that 
+As a result two staging tables were created and filled: **staging_songs** (from song dataset .jsons) and **staging_events** (from event simulator jsons). Then I used these tables to distribute the data into a star chema tables. Fact Table: **songplays**; Dimension Tables: **users**,**songs**, **artists**, **time**. As a result a Redshift-based Data Warehouse was created that 
 is of huge benefit for an imaginary music streaming app "Sparkify" due to following reasons:
 * Provides information about user activities over times of day and user location which makes possible to correctly arrange resources
 * Provides information about user song and band preferences which allow to develop a recommendation system (rank based recomendations, user-user collaborative filtering e.t.c)
